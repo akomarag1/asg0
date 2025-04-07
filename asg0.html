@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 0 - Vector Library</title>
+  </head>
+
+  <body onload="main()">
+    <div style="text-align: center;">
+      <!-- Canvas -->
+      <canvas id="example" width="400" height="400" style="display: block; margin: 0 auto;"></canvas>
+
+      <!-- Inputs for v1 and v2 -->
+      <div style="margin-top: 10px;">
+        <strong>v1 X:</strong> <input type="text" id="xVal" value="2.25">
+        <strong>v1 Y:</strong> <input type="text" id="yVal" value="2.25">
+        <br>
+        <strong>v2 X:</strong> <input type="text" id="xVal2" value="0.75">
+        <strong>v2 Y:</strong> <input type="text" id="yVal2" value="1.5">
+        <br>
+        <input type="button" value="Draw v1 and v2" onclick="handleDrawEvent()">
+      </div>
+
+      <!-- Operation UI -->
+      <div style="margin-top: 20px;">
+        <select id="operation">
+          <option value="add">Add</option>
+          <option value="sub">Subtract</option>
+          <option value="mul">Multiply</option>
+          <option value="div">Divide</option>
+          <option value="angle">Angle Between</option>
+          <option value="area">Area</option>
+        </select>
+        <strong>Scalar:</strong> <input type="text" id="scalar" value="1">
+        <input type="button" value="Draw Result" onclick="handleDrawOperationEvent()">
+      </div>
+
+      <!-- Magnitude & Normalize -->
+      <div style="margin-top: 20px;">
+        <input type="button" value="Print Magnitude" onclick="printMagnitude()">
+        <input type="button" value="Normalize and Draw" onclick="normalizeAndDraw()">
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="lib/cuon-matrix-cse160.js"></script>
+    <script src="asg0.js"></script>
+  </body>
+</html>
